@@ -1,5 +1,6 @@
 import type { ConfigurationChangeEvent } from 'vscode';
 import { Disposable } from 'vscode';
+<<<<<<< HEAD:src/autolinks.ts
 import { GlyphChars } from './constants';
 import type { IntegrationId } from './constants.integrations';
 import { IssueIntegrationId } from './constants.integrations';
@@ -18,6 +19,27 @@ import { escapeMarkdown } from './system/markdown';
 import type { MaybePausedResult } from './system/promise';
 import { capitalize, encodeHtmlWeak, escapeRegex, getSuperscript } from './system/string';
 import { configuration } from './system/vscode/configuration';
+=======
+import type { AutolinkReference, AutolinkType } from '../config';
+import { GlyphChars } from '../constants';
+import type { Container } from '../container';
+import type { IssueOrPullRequest } from '../git/models/issue';
+import { getIssueOrPullRequestHtmlIcon, getIssueOrPullRequestMarkdownIcon } from '../git/models/issue';
+import type { GitRemote } from '../git/models/remote';
+import type { ProviderReference } from '../git/models/remoteProvider';
+import type { ResourceDescriptor } from '../plus/integrations/integration';
+import type { IntegrationId } from '../plus/integrations/providers/models';
+import { IssueIntegrationId } from '../plus/integrations/providers/models';
+import { fromNow } from '../system/date';
+import { debug } from '../system/decorators/log';
+import { encodeUrl } from '../system/encoding';
+import { join, map } from '../system/iterable';
+import { Logger } from '../system/logger';
+import { escapeMarkdown } from '../system/markdown';
+import type { MaybePausedResult } from '../system/promise';
+import { capitalize, encodeHtmlWeak, escapeRegex, getSuperscript } from '../system/string';
+import { configuration } from '../system/vscode/configuration';
+>>>>>>> 035a1cd88 (Replaces markdown component w/ existing component):src/annotations/autolinks.ts
 
 const emptyAutolinkMap = Object.freeze(new Map<string, Autolink>());
 
