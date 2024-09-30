@@ -1,6 +1,9 @@
 import type { ConfigurationChangeEvent } from 'vscode';
 import { Disposable } from 'vscode';
+<<<<<<< HEAD
 <<<<<<< HEAD:src/autolinks.ts
+=======
+>>>>>>> 5df73dc6d (Refactors autolinks configuration)
 import { GlyphChars } from './constants';
 import type { IntegrationId } from './constants.integrations';
 import { IssueIntegrationId } from './constants.integrations';
@@ -19,6 +22,7 @@ import { escapeMarkdown } from './system/markdown';
 import type { MaybePausedResult } from './system/promise';
 import { capitalize, encodeHtmlWeak, escapeRegex, getSuperscript } from './system/string';
 import { configuration } from './system/vscode/configuration';
+<<<<<<< HEAD
 =======
 import type { AutolinkReference, AutolinkType } from '../config';
 import { GlyphChars } from '../constants';
@@ -40,6 +44,8 @@ import type { MaybePausedResult } from '../system/promise';
 import { capitalize, encodeHtmlWeak, escapeRegex, getSuperscript } from '../system/string';
 import { configuration } from '../system/vscode/configuration';
 >>>>>>> 035a1cd88 (Replaces markdown component w/ existing component):src/annotations/autolinks.ts
+=======
+>>>>>>> 5df73dc6d (Refactors autolinks configuration)
 
 const emptyAutolinkMap = Object.freeze(new Map<string, Autolink>());
 
